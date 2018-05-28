@@ -1,4 +1,4 @@
-# logchain
+# logchain for monitoring
 _Blockchain platform for IoT_
 
 Features

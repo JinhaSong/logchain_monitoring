@@ -47,9 +47,9 @@ def log(data):
     elif item[0] == 'block':
         event = 'block_event'
 
-    add_msg = data[1]
-    for index in range(2, len(data)):
-        add_msg += "." + data[index]
+    add_msg = item[1]
+    for index in range(2, len(item)):
+        add_msg += "." + item[index]
 
     json_data = {"timestamp": str(timestamp), "type": event, "message": add_msg}
     requests.request("POST", "http://127.0.0.1:80(URL)", data=json.dump(json_data), headers=header)

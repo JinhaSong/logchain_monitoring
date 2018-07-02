@@ -1,0 +1,14 @@
+{
+    "PEER_MGR": {
+        "ID": "orion",
+        "IP": "163.239.25.25",
+        "PORT": 9999
+    },
+    "PEER_CONNECTOR_PORT": 8888,
+    "PEER_LIST": [
+        "twins",
+        "giants",
+        "orion",
+        "tigers"
+    ]
+}

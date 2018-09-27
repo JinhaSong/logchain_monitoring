@@ -1,1 +1,0 @@
-{"extra_data": {"tx_body": {"Type": "led", "agent": "actuator", "duration": "7000", "humidity": "74%", "latitude": 33.0577, "temp": 4.49}, "tx_title": "tx from gateway node"}, "sender_ip": "163.239.25.25", "timestamp": "20180627151155", "tx_id": "B20180627151155", "type": "T"}

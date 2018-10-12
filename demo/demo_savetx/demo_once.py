@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/workspace/logchain_monitoring')
+sys.path.append('/workspace')
 from demo.demo_savetx import transaction_generator
 from PyQt5 import QtCore, QtGui, QtWidgets
 from demo.demo_savetx import request_test

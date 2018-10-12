@@ -1,0 +1,14 @@
+certifi==2018.1.18
+chardet==3.0.4
+click==6.7
+Flask
+idna==2.6
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+netifaces
+requests
+urllib3==1.22
+Werkzeug==0.14.1
+wheel==0.31.0
+Adafruit-DHT

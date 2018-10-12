@@ -1,6 +1,6 @@
 import logging
 import sys
-sys.path.append('D:\\CloudStation\\Project\\Logchain\\logchain_monitoring')
+sys.path.append('/workspace/logchain_monitoring')
 
 import threading
 

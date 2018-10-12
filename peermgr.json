@@ -1,14 +1,23 @@
 {
     "PEER_MGR": {
-        "ID": "orion",
-        "IP": "163.239.25.25",
+        "ID": "giants",
+        "IP": "163.239.25.42",
         "PORT": 9999
     },
     "PEER_CONNECTOR_PORT": 8888,
     "PEER_LIST": [
-        "twins",
-        "giants",
-        "orion",
-        "tigers"
+        "GW01(mlbacchus)",
+        "GW02(mlleo)",
+        "G@03(mlatlas)",
+        "GW04(mllupus)",
+        "GW05(mlcupid)",
+        "GW06(mlvenus)",
+        "GW07(mlpluto)",
+        "GW08(mldraco)",
+        "GW09(mlquila)",
+        "GW10(mlvela)",
+        "GW11(mlmoon)",
+        "GW12(mlneptune)",
+        "GW13(mlguava)"
     ]
 }

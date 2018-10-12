@@ -1,6 +1,6 @@
 import logging
 import sys
-sys.path.append('/workspace/logchain_monitoring')
+sys.path.append('/workspace')
 import time
 from PyQt5 import QtWidgets
 from monitoring import monitoring

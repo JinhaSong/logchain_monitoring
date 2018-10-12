@@ -83,8 +83,8 @@ def get_my_ip():
 
 
 def get_my_ip_rpi():
-    netifaces.ifaddresses('wlan0')
-    ip = netifaces.ifaddresses('wlan0')[netifaces.AF_INET][0]['addr']
+    netifaces.ifaddresses('eth0')
+    ip = netifaces.ifaddresses('eth0')[netifaces.AF_INET][0]['addr']
     monitoring.log("log.IP address:" + ip)
     return ip
 

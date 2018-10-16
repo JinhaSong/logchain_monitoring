@@ -17,7 +17,7 @@ _Blockchain platform for IoT_
 vi peerconnector.json
 
 # Docker build
-docker build -t logchain:latest .
+docker build -t logchain:monitoring .
 
 # Docker Run
 docker run --privileged --device /dev/gpiomem --name logchain-test \

@@ -7,4 +7,4 @@ docker run --privileged --device /dev/gpiomem --name logchain_monitoring \
   -p 10101:10101 \
   -p 10654:10654 \
   -it logchain:monitoring /bin/bash
-docker start logchain
+docker start logchain_monitoring

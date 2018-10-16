@@ -1,4 +1,4 @@
-docker build -t logchain:latest .
+docker build -t logchain:monitoring .
 docker run --privileged --device /dev/gpiomem --name logchain-test \
   -p 5000:5000 \
   -p 8000:8000 \

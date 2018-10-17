@@ -12,6 +12,8 @@ RUN apt-get install -y software-properties-common vim
 
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
+RUN ln -snf /usr/share/zoneinfo/Asia/Seoul /etc/localtime && \
+    echo "Asia/Seoul" > /etc/timezone
 
 WORKDIR /workspace
 ADD . .

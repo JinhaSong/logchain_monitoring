@@ -9,6 +9,6 @@ if [ $# -eq 0 ]
         while :
         do
             python demo/demo_savetx/demo_once.py "http://"$url":5000/tx/save"
-            sleep $interval
+            sleep $interval"m"
         done
 fi

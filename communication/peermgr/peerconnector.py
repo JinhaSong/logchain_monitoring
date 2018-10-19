@@ -153,15 +153,7 @@ class UpdatingConnectedPeerListThread(threading.Thread):
 
             request_sock.close()
 
-            nodeproperty.ConnectedPeerList = RemovePeerListDuplicate(rcvd_list)
+            nodeproperty.ConnectedPeerList = rcvd_list
             set_peer.set_my_peer_num()
             set_peer.set_total_peer_num()
 
-
-def RemovePeerListDuplicate(rcvd_list) :
-    rcvd_list_set = set(map(tuple, rcvd_list))
-    peerList = map(list, rcvd_list_set)
-    peerList_set = set(tuple(x) for x in rcvd_list)
-    peerList = [list(x) for x in peerList_set]
-
-    return peerList

@@ -172,7 +172,6 @@ class ManagingConnectedPeerListThread(threading.Thread):
                     "log.Ignore it because there is no corresponding ID in the predefined list.")
 
 def RemovePeerListDuplicate(rcvd_list):
-    print("============REMOVE DUPLICATE==============")
     rcvd_list_set = set(map(tuple, rcvd_list))
     peerList = map(list, rcvd_list_set)
     peerList_set = set(tuple(x) for x in rcvd_list)

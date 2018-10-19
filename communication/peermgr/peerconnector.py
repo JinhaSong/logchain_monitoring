@@ -30,7 +30,6 @@ connectedPeerMgr_socket_q = Queue()
 # Add PeerMgr information to ConnectedPeerList by default.
 nodeproperty.ConnectedPeerList = [[peermgr_ID, peermgr_IP]]
 
-
 def connect_to_peermgr():
     monitoring.log('log.Start a thread to connect to PeerMgr.')
     # TODO: If there is no response after pinging PeerMgr, attempt to connect to another PeerMgr.
@@ -154,6 +153,16 @@ class UpdatingConnectedPeerListThread(threading.Thread):
 
             request_sock.close()
 
-            nodeproperty.ConnectedPeerList = rcvd_list
+            nodeproperty.ConnectedPeerList = RemovePeerListDuplicate(rcvd_list)
             set_peer.set_my_peer_num()
             set_peer.set_total_peer_num()
+
+
+def RemovePeerListDuplicate(rcvd_list) :
+    print("============REMOVE DUPLICATE==============")
+    rcvd_list_set = set(map(tuple, rcvd_list))
+    peerList = map(list, rcvd_list_set)
+    peerList_set = set(tuple(x) for x in rcvd_list)
+    peerList = [list(x) for x in peerList_set]
+
+    return peerList

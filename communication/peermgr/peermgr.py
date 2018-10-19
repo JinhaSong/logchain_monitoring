@@ -152,6 +152,7 @@ class ManagingConnectedPeerListThread(threading.Thread):
                 monitoring.log("log.Add new peer's IP to ConnectedPeerList.")
                 nodeproperty.ConnectedPeerList.append([peerid, socketip])
                 nodeproperty.ConnectedPeerList.sort()
+
                 request_sock.close()
 
                 connected_peer_list_json = json.dumps(
@@ -170,5 +171,13 @@ class ManagingConnectedPeerListThread(threading.Thread):
                 monitoring.log(
                     "log.Ignore it because there is no corresponding ID in the predefined list.")
 
+def RemovePeerListDuplicate(rcvd_list):
+    print("============REMOVE DUPLICATE==============")
+    rcvd_list_set = set(map(tuple, rcvd_list))
+    peerList = map(list, rcvd_list_set)
+    peerList_set = set(tuple(x) for x in rcvd_list)
+    peerList = [list(x) for x in peerList_set]
+
+    return peerList
 
 # TODO: We should update ConnectedPeerList by periodically executing ping.
